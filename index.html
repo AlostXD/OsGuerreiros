@@ -1,11 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Os Guerreiros</title>
+    <link rel="stylesheet" href="css/style.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <nav class="navbar">
+        <button id="btn-navbar-abrir" onclick="abrir()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="navbar-content" id="navbar-content">
+            <div class="btn-fechar" onclick="fechar()">
+                <h2>Fechar</h2>
+                <button id="btn-navbar-fechar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                </button>
+            </div>
+            <ul class="navbar-list">
+                <li class="navbar-item"><a href="#home" class="navbar-link">Home</a></li>
+                <li class="navbar-item"><a href="#sobre" class="navbar-link">Sobre</a></li>
+                <li class="navbar-item"><a href="https://osg.cx/estatuto" class="navbar-link">Estatuto</a></li>
+                <li class="navbar-item"><a href="#junte" class="navbar-link">Junte-se</a></li>
+                <li class="navbar-item"><a href="#server" class="navbar-link">Servidores de Games</a></li>
+                <li class="navbar-item"><a href="#adm" class="navbar-link">Administração</a></li>
+                <li class="navbar-item"><a href="#patrocinio" class="navbar-link">Patrocinadores</a></li>
+                <li class="navbar-item"><a href="#faq" class="navbar-link">FAQ</a></li>
+                <li class="navbar-item"><a href="#contatos" class="navbar-link">Contatos</a></li>
+            </ul>
+            <img src="img/logo.webp" alt="logo" class="logo-navbar">
+        </div>
+    </nav>
+    <main id="body">
+        <div class="home container">
+            <img src="img/bg-home.webp" alt="Background-Home" class="background">
+            <div class="home-content">
+                <div class="home-logo-btns">
+                    <img src="img/logo.webp" alt="logo" class="logo">
+                    <div class="btns-home">
+                        <a href="https://osg.cx/equipe-principal" target="_blank"><img src="img/btn-team-osguerreiros.gif" alt="Equipe" class="btns-equipe"></a>
+                        <a href="https://osg.cx/equipe-academia" target="_blank"><img src="img/btn-team-academia.gif" alt="Equipe-Academia" class="btns-equipe"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sobre">
+            <div class="sobre-content container">
+                <img src="img/bg-sobre.webp" alt="Background-Sobre" class="background">
+            </div>
+        </div>
+        <div class="junte">
+            <div class="junte-content container"></div>
+        </div>
+        <div class="server">
+            <div class="server-content container"></div>
+        </div>
+        <div class="adm">
+            <div class="adm-content container">
+                <img src="img/bg-adm.webp" alt="Background-Adm" class="background">
+            </div>
+        </div>
+        <div class="patrocinio">
+            <div class="patrocinio-content container">    
+                <img src="img/bg-patrociador.webp" alt="Background-Patrocínios" class="background">
+            </div>
+        </div>
+        <div class="contatos">
+            <div class="contatos-content container"></div>
+        </div>
     
+    <div id="backdrop"></div>
+    </main>
+    
+
+
+
+<script src="script.js"></script>
 </body>
 </html>
