@@ -100,7 +100,7 @@ body {
 .navbar-list {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
 }
 
 .navbar-item a {
@@ -144,6 +144,9 @@ body {
     z-index: 2;
 }
 
+/* Fim da Navbar */
+
+
 /* Home */
 
 .home-content, .btns-home {
@@ -152,6 +155,10 @@ body {
     align-items: center;
     gap: 20px;
     padding: 150px;
+}
+
+.home-content {
+    flex-direction: column;
 }
 
 .home-logo-btns {
@@ -176,4 +183,35 @@ body {
 
 .btns-home a:hover {
     transform: scale(1.2);
+}
+
+.scrolls{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll {
+    opacity: 30%;
+    max-width: 90px;
+}
+
+.patrocinadores-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: var(--laranja);
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1;
+}
+
+.img-pat-home {
+    max-width: 70px;
 }
