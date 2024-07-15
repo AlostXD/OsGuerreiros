@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-    max-width: 100%;
+    max-width: 70%;
     margin: 0 auto;
 }
 
@@ -214,4 +214,109 @@ body {
 
 .img-pat-home {
     max-width: 70px;
+}
+
+/* Fim da Home */
+
+
+/* Sobre */
+
+.sobre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.sobre-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+}
+
+.quem-sao, .qual-objetivo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#sobre-bg {
+    margin-top: 600px;
+}
+
+.logo-sobre {
+    max-width: 200px;
+}
+
+h2 {
+    color: var(--laranja);
+}
+
+/* Fim do Sobre */
+
+/* Junte-se */
+
+.junte {
+    margin: 350px auto;
+}
+
+.junte-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    text-align: center;
+    max-width: 100%;
+}
+
+.content-junte-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.requisitos, .oferecimentos, .divisoes, .recrutamento {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #9F501F;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 100%;
+}
+
+.item-junte-content-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.divisoes ul {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.discord-rec {
+    background-color: var(--laranja);
+    padding: 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+
+.discord-rec:hover {
+    transform: scale(1.1);
+}
+
+.junte h3 {
+    color: var(--laranja);
 }
