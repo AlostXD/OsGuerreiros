@@ -222,7 +222,7 @@ dialog {
     gap: 20px;
     padding: 20px;
     border-radius: 12px;
-    background-color: var(--laranja);
+    background-color: rgb(159, 80, 31, 0.9);
     position: absolute;
     top: 15px;
     right: 15px;
@@ -297,6 +297,7 @@ h2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
+    max-width: 60%;
 }
 
 .requisitos, .oferecimentos, .divisoes, .recrutamento {
