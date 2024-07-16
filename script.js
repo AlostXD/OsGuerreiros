@@ -14,3 +14,22 @@ function fechar() {
     backdrop.style.display = 'none';
     abrirNav.style.display = 'flex';
 }
+
+
+function abrirModal(modalID) {
+    let modal = document.getElementById(modalID);
+    if(modal){
+        modal.showModal();
+    } else {
+        console.log('Modal não encontrado');
+    }
+}
+
+function fecharModal(modalID) {
+    let modal = document.getElementById(modalID);
+    if(modal){
+        modal.close();
+    } else {
+        console.log('Modal não encontrado');
+    }
+}

@@ -28,6 +28,23 @@ body {
     left: 0;
 }
 
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+dialog {
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: var(--background-color);
+    border: none;
+    border-radius: 12px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+}
 
 /* Navbar */
 
@@ -245,7 +262,7 @@ body {
 }
 
 #sobre-bg {
-    margin-top: 600px;
+    margin-top: 400px;
 }
 
 .logo-sobre {
@@ -261,7 +278,8 @@ h2 {
 /* Junte-se */
 
 .junte {
-    margin: 350px auto;
+    margin: 300px auto; 
+    margin-top: 600px;
 }
 
 .junte-content {
@@ -320,3 +338,122 @@ h2 {
 .junte h3 {
     color: var(--laranja);
 }
+
+.recrutamento a {
+    color: blue;
+}
+
+/* Fim do Junte-se */
+
+/* Servidores */
+
+.server-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    margin: 300px auto;
+}
+
+.server-divs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.div-left-server {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 60%;
+}
+
+.uper-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.uper-div ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.lower-div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.div-right-server {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.btn-open {
+    all: unset;
+    background-color: var(--laranja);
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.btn-open:hover {
+    transform: scale(1.1);
+}
+
+.modal-content-server {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    max-width: 100%;
+}
+
+.modal-content-server img {
+    max-width: 400px;
+}
+
+.modal-text-server {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    gap: 20px;
+    width: 400px;
+    list-style: none;
+}
+
+.modal-text-server span {
+    color: var(--laranja);
+}
+
+.modal-content-server button {
+    all: unset;
+}
+
+.icon-fechar-modal {
+    width: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.icon-fechar-modal:hover {
+    transform: scale(1.3);
+}
+
+/* Fim dos Servidores */
