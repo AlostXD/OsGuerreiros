@@ -59,7 +59,7 @@ dialog {
     transition: all 0.5s ease;
     background-color: var(--laranja);
     border-radius: 12px;
-    padding: 20px;
+    padding: 15px;
     position: fixed;
     top: 15px;
     left: 15px;
@@ -93,7 +93,7 @@ dialog {
     transition: all 0.5s ease;
     background-color: var(--laranja);
     border-radius: 12px;
-    padding: 20px;
+    padding: 15px;
 }
 
 #btn-navbar-fechar span {
@@ -171,7 +171,7 @@ dialog {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    padding: 150px;
+    padding: 100px;
 }
 
 .home-content {
@@ -457,3 +457,106 @@ h2 {
 }
 
 /* Fim dos Servidores */
+
+/* F.A.Q */
+
+.faq {
+    margin: 300px auto;
+}
+
+.faq-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+}
+
+.faq-content img {
+    max-width: 100%;
+}
+
+.faq-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.faq-box-questions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.faq-box-questions li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3f3e3e;
+
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.faq-box-questions li img {
+    max-width: 30px;
+}
+
+/* Fim do F.A.Q */
+
+/* Equipe ADM */
+
+.adm {
+    margin: 300px auto;
+}
+
+.adm-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+}
+
+.card-adm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.card-ceo, .card-headstaff-member {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #9F501F;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    gap: 30px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.card-ceo:hover, .card-headstaff-member:hover {
+    transform: scale(1.1);
+}
+
+.card-ceo img, .card-headstaff-member img {
+    max-width: 170px;
+    border-radius: 500px;
+}
+
+.card-headstaff {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 30px;
+}
