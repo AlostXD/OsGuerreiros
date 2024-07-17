@@ -281,7 +281,7 @@
             <div class="adm-content container">
                 <h2>Equipe Administrativa</h2>
                 <div class="card-adm">
-                    <div class="card-ceo">
+                    <div class="card-ceo" onclick="abrirModal(5)">
                         <img src="img/ceo-bf.webp" alt="BFshow">
                         <div class="card-content">
                             <h3>Bruno "BFshow" Felipe</h3>
@@ -289,14 +289,14 @@
                         </div>
                     </div>
                     <div class="card-headstaff">
-                        <div class="card-headstaff-member">
+                        <div class="card-headstaff-member" onclick="abrirModal(6)">
                             <img src="img/headstaff-games-cubano.webp" alt="Cubano">
                             <div class="card-content">
                                 <h3>Luciano "Cubano" Pavan</h3>
                                 <p>CTO</p>
                             </div>
                         </div>
-                        <div class="card-headstaff-member">
+                        <div class="card-headstaff-member" onclick="abrirModal(7)">
                             <img src="img/headstaff-discord-alost.webp" alt="Alost">
                             <div class="card-content">
                                 <h3>Vanderlei "Alost" Junio</h3>
@@ -304,6 +304,66 @@
                             </div>
                         </div>
                     </div>
+                    <dialog id="5">
+                        <div class="modal-content-adm">
+                            <img src="img/ceo-bf.webp" alt="BFshow">
+                            <div class="modal-text-adm">
+                                <h3>Bruno "BFshow" Felipe</h3>
+                                <p>CEO</p>
+                                <p>Bruno Felipe também conhecido como BFshow é o fundador da equipe Os Guerreiros, atua como um CEO da equipe Os Guerreiros.</p>
+                                <p><strong>Email: </strong>bfshow@osguerreiros.com</p>
+                                <div class="img-card-adm">
+                                    <a href="https://www.facebook.com/canalBFshow" target="_blank">
+                                        <img src="img/Facebook-logo.png" alt="Facebook">
+                                    </a>
+                                    <a href="https://www.instagram.com/osg.bfshow" target="_blank">
+                                        <img src="img/Instagram-logo.png" alt="Instagram">
+                                    </a>
+                                    <a href="https://twitter.com/canalBFshow" target="_blank">
+                                        <img src="img/Twitter-logo.png" alt="Twitter">
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="img/ico-fechar.webp" alt="Fechar" onclick="fecharModal(5)" class="icon-fechar-modal">
+                    </dialog>
+                    <dialog id="6">
+                        <div class="modal-content-adm">
+                            <img src="img/headstaff-games-cubano.webp" alt="Cubano">
+                            <div class="modal-text-adm">
+                                <h3>Luciano "Cubano" Pavan</h3>
+                                <p>Headstaff / CTO</p>
+                                <p>Luciano Pavan também conhecido como CubanoBra, ocupa dentro da equipe Os Guerreiros o cargo de Headstaff dos servidores de games, sendo então responsável por manter os servidores operacionais, manter a boa convivência entre os jogadores e liderar a respectiva staff.</p>
+                                <p><strong>Email: </strong>cubanobra@osguerreiros.com</p>
+                                <div class="img-card-adm">
+                                    <a href="https://www.facebook.com/cubanobra" target="_blank">
+                                        <img src="img/Facebook-logo.png" alt="Facebook">
+                                    </a>
+                                    <a href="https://www.instagram.com/cubanobra/" target="_blank">
+                                        <img src="img/Instagram-logo.png" alt="Instagram">
+                                    </a>
+                                    <a href="https://twitter.com/cubanobra" target="_blank">
+                                        <img src="img/Twitter-logo.png" alt="Twitter">
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="img/ico-fechar.webp" alt="Fechar" onclick="fecharModal(6)" class="icon-fechar-modal">
+                    </dialog>
+                    <dialog id="7">
+                        <div class="modal-content-adm">
+                            <img src="img/headstaff-discord-alost.webp" alt="Alost">
+                            <div class="modal-text-adm">
+                                <h3>Vanderlei "Alost" Junio</h3>
+                                <p>Headstaff / CCO</p>
+                                <p>Vanderlei Junio, conhecido como Alost, ocupa dentro da equipe Os Guerreiros o cargo de Headstaff Discord da equipe, sendo responsável pela administração dos servidores que levam nosso nome, sendo também responsável pelo bem-estar de todas as pessoas que fazem parte do nosso Discord.</p>
+                                <p><strong>Email: </strong>alost@osguerreiros.com</p>
+                                <div class="img-card-adm">
+                                    <a href="https://www.instagram.com/alostxd/" target="_blank">
+                                        <img src="img/Instagram-logo.png" alt="Instagram">
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="img/ico-fechar.webp" alt="Fechar" onclick="fecharModal(7)" class="icon-fechar-modal">
+                    </dialog>
                 </div>
             </div>
         </div>

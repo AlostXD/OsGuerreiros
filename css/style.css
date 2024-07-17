@@ -563,3 +563,37 @@ h2 {
     align-items: baseline;
     gap: 30px;
 }
+
+.modal-content-adm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 20px;
+}
+
+.modal-content-adm img {
+    max-width: 200px;
+}
+
+.modal-text-adm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    gap: 20px;
+}
+
+.modal-text-adm h3 {
+    color: var(--laranja);
+}
+
+.img-card-adm {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.img-card-adm img {
+    width: 40px;
+}
