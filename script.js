@@ -33,3 +33,19 @@ function fecharModal(modalID) {
         console.log('Modal não encontrado');
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-box-questions li');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-text');
+        if (question) {
+            question.addEventListener('click', function() {
+                const answer = item.querySelector('.faq-response');
+                if (answer) {
+                    answer.classList.toggle('show');
+                }
+            });
+        }
+    });
+});
