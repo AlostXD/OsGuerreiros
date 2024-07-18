@@ -15,6 +15,11 @@ body {
     background-color: var(--background-color);
 }
 
+main {
+    scroll-snap-points-y: repeat(100vh);
+}
+
+
 html {
     scroll-behavior: smooth;
 }
@@ -666,8 +671,7 @@ h2 {
 
 .img-card-adm {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    gap: 20px;
 }
 
 .img-card-adm img {

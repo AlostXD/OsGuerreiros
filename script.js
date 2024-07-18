@@ -50,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
 function scrollBehavior(event) {
     const sections = document.querySelectorAll("section");
     let currentSectionIndex = Array.from(sections).findIndex(section => section.getBoundingClientRect().top === 0);
@@ -72,12 +71,10 @@ function scrollBehavior(event) {
 
 document.addEventListener("wheel", scrollBehavior, { passive: false });
 
-// Add smooth transitions between sections when scrolling
-const sections = document.querySelectorAll("section");
-
+// Add scroll-snap-points-y property to sections
+const sections = document.getElementById("body").querySelectorAll("section");
 sections.forEach(section => {
-    section.style.scrollBehavior = "smooth";
-    section.style.scrollSnapType = "y mandatory";
+    section.style.scrollSnapPointsY = "repeat(850px)";
 });
 
 
