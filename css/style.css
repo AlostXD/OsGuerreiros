@@ -13,20 +13,25 @@
 
 body {
     background-color: var(--background-color);
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 main {
-    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y mandatory; /* Ensure snap scrolling */
 }
 
-
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Smooth scroll */
+}
+
+section {
+    height: 100vh; /* Ensure each section occupies full viewport height */
+    scroll-snap-align: start; /* Align sections at the start of the viewport */
 }
 
 .container {
     width: 1200px;
-    height: 850px;
+    height: 100vh;
     margin: 0 auto;
 }
 
@@ -836,4 +841,127 @@ h2 {
     padding: 20px;
     border-radius: 12px;
     width: 100%;
+}
+/*
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: auto;
+    }
+
+    .home-logo-btns {
+        gap: 10px;
+    }
+
+    .btns-home {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .junte-content {
+        height: 100vh;
+    }
+
+    .content-junte-cards {
+        grid-template-columns: 1fr 1fr;
+        max-width: 100%;
+    }
+
+    .modal-content-server, .modal-content-adm {
+        flex-direction: column;
+    }
+
+    .patrocinio-box {
+        grid-template-columns: 1fr; 
+    }
+}
+*/
+
+/* Responsiveness */
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 100%;
+        height: auto;
+    }
+
+    .home, .junte, .server, .faq, .adm, .patrocinio, .contatos {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .background {
+        max-width: 100%;
+        left: 0;
+    }
+
+    .navbar-item a {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        position: static;
+        top: auto;
+        height: auto;
+    }
+
+    .navbar a {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .navbar img {
+        max-width: 150px;
+    }
+
+    .btn-navbar-abrir {
+        display: none;
+    }
+
+    .btn-fechar {
+        display: none;
+    }
+
+    .home-logo-btns {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btns-home {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .junte-content {
+        height: auto;
+    }
+
+    .content-junte-cards {
+        grid-template-columns: 1fr;
+        max-width: 60%;
+    }
+
+    .modal-content-server,
+    .modal-content-adm {
+        flex-direction: column;
+    }
+
+    .patrocinio-box {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .patrocinio-content {
+        text-align: center;
+    }
+
+    .contatos-content {
+        flex-direction: column;
+    }
+
+    .box-contatos-left {
+        width: 100%;
+    }
 }
