@@ -996,6 +996,10 @@ h2 {
         margin-top: 300px; /* Ajusta a margem para telas pequenas */
     }
 
+    .junte {
+        padding-top: 300px;
+    }
+
     .box-contatos-left {
         max-width: 100%;
     }
