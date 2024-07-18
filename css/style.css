@@ -15,9 +15,20 @@ body {
     background-color: var(--background-color);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
-    max-width: 70%;
+    width: 1200px;
+    height: 850px;
     margin: 0 auto;
+}
+
+.container-img {
+    max-width: 1200px;
+    height: 100vh;
+    margin: auto;
 }
 
 
@@ -44,6 +55,43 @@ dialog {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+
+.home {
+    max-width: 100%;
+    max-height: 100%;
+    background-image: url('/img/bg-home.webp');
+    background-size: cover;
+}
+
+.sobre {
+    max-width: 100%;
+    max-height: 100%;
+    background-image: url('/img/bg-sobre.webp');
+    background-size: cover;
+}
+
+.adm {
+    max-width: 100%;
+    max-height: 100%;
+    background-image: url('/img/bg-adm.webp');
+    background-size: cover;
+}
+
+.patrocinio {
+    max-width: 100%;
+    max-height: 100%;
+    background-image: url('/img/bg-patrocinador.webp');
+    background-size: cover;
+}
+
+.home, .junte, .server, .faq, .adm, .patrocinio, .contatos {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* Navbar */
 
@@ -175,6 +223,8 @@ dialog {
 
 .home-content {
     flex-direction: column;
+    max-width: 100%;
+    height: 100vh;
 }
 
 .home-logo-btns {
@@ -182,7 +232,6 @@ dialog {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
 }
 
 .logo {
@@ -206,11 +255,19 @@ dialog {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
-.scroll {
-    opacity: 30%;
-    max-width: 90px;
+#scroll1 {
+    width: 35px;
+}
+
+#scroll2 {
+    width: 25px;
+}
+
+#scroll3 {
+    width: 15px;
 }
 
 .patrocinadores-home {
@@ -242,13 +299,13 @@ dialog {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    height: 100vh;
 }
 
 .sobre-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 30px;
     padding: 30px;
@@ -277,8 +334,8 @@ h2 {
 /* Junte-se */
 
 .junte {
-    margin: 300px auto; 
-    margin-top: 600px;
+    height: 100vh;
+    max-width: 100%;
 }
 
 .junte-content {
@@ -286,17 +343,15 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
-    padding: 30px;
+    gap: 20px;
     text-align: center;
-    max-width: 100%;
 }
 
 .content-junte-cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
-    max-width: 60%;
+    max-width: 80%;
 }
 
 .requisitos, .oferecimentos, .divisoes, .recrutamento {
@@ -304,7 +359,7 @@ h2 {
     flex-direction: column;
     gap: 20px;
     background-color: #9F501F;
-    padding: 30px;
+    padding: 20px;
     border-radius: 12px;
     max-width: 100%;
 }
@@ -312,19 +367,19 @@ h2 {
 .item-junte-content-card {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     text-align: left;
 }
 
 .divisoes ul {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    justify-content: space-around;
 }
 
 .discord-rec {
     background-color: var(--laranja);
-    padding: 20px;
+    padding: 10px;
     border-radius: 12px;
     text-decoration: none;
     font-weight: bold;
@@ -354,7 +409,6 @@ h2 {
     align-items: center;
     gap: 30px;
     padding: 30px;
-    margin: 300px auto;
 }
 
 .server-divs {
@@ -463,11 +517,6 @@ h2 {
 
 /* F.A.Q */
 
-
-.faq {
-    margin: 300px auto;
-}
-
 .faq-content {
     display: flex;
     justify-content: center;
@@ -543,10 +592,6 @@ h2 {
 /* Fim do F.A.Q */
 
 /* Equipe ADM */
-
-.adm {
-    margin: 300px auto;
-}
 
 .adm-content {
     display: flex;
@@ -633,16 +678,13 @@ h2 {
 
 /* Patrocício */
 
-.patrocinio {
-    margin: 300px auto;
-}
-
 .patrocinio-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 60px;
+    height: 100vh;
 }
 
 .patrocinio-box {
@@ -671,6 +713,7 @@ h2 {
     border-radius: 12px;
     gap: 20px;
     transition: all 0.5s ease;
+    width: 300px;
 }
 
 .patrocinio-box li:hover {
@@ -720,14 +763,10 @@ h2 {
     gap: 20px;
 }
 
+
 /* Fim do Patrocínio */
 
 /* Contatos */
-
-.contatos {
-    margin: 300px auto;
-    margin-top: 600px;
-}
 
 .contatos-content {
     display: flex;
@@ -735,6 +774,8 @@ h2 {
     align-items: center;
     gap: 30px;
     padding: 30px;
+    max-width: 900px;
+    max-width: 1200px;
 }
 
 .box-contatos-left {
@@ -776,7 +817,7 @@ h2 {
 .contatos-right {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 30px;
 }
@@ -790,4 +831,5 @@ h2 {
     background-color: rgb(159, 80, 31, 0.9);
     padding: 20px;
     border-radius: 12px;
+    width: 100%;
 }

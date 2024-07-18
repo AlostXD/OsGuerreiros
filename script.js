@@ -49,3 +49,36 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+function scrollBehavior(event) {
+    const sections = document.querySelectorAll("section");
+    let currentSectionIndex = Array.from(sections).findIndex(section => section.getBoundingClientRect().top === 0);
+    
+    if (event.deltaY > 0) {
+        // Scroll down
+        if (currentSectionIndex < sections.length - 1) {
+            sections[currentSectionIndex + 1].scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    } else {
+        // Scroll up
+        if (currentSectionIndex > 0) {
+            sections[currentSectionIndex - 1].scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    }
+
+    event.preventDefault(); // Prevent the default scroll behavior
+}
+
+document.addEventListener("wheel", scrollBehavior, { passive: false });
+
+// Add smooth transitions between sections when scrolling
+const sections = document.querySelectorAll("section");
+
+sections.forEach(section => {
+    section.style.scrollBehavior = "smooth";
+    section.style.scrollSnapType = "y mandatory";
+});
+
+
+
