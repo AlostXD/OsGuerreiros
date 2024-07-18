@@ -984,3 +984,10 @@ h2 {
         width: 100%;
     }
 }
+
+@media (max-width: 260px) {
+    
+    .sobre {
+        margin: 600px auto;
+    }
+}
