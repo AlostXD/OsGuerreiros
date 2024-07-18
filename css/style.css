@@ -940,8 +940,8 @@ h2 {
     }
 
     .content-junte-cards {
+        display: grid;
         grid-template-columns: 1fr;
-        max-width: 60%;
     }
 
     .modal-content-server,
@@ -950,7 +950,7 @@ h2 {
     }
 
     .patrocinio-box {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .patrocinio-content {
@@ -962,6 +962,25 @@ h2 {
     }
 
     .box-contatos-left {
+        width: 100%;
+    }
+
+    .faq-content {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    .home, .junte, .server, .faq, .adm, .patrocinio, .contatos {
+        margin: 120px auto;
+    }
+
+    .card-headstaff {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contatos-contato, .contatos-administracao {
         width: 100%;
     }
 }
