@@ -993,7 +993,7 @@ h2 {
 
 @media (max-width: 400px) {
     .home, .sobre, .junte, .server, .faq, .adm, .patrocinio, .contatos {
-        margin: 0; /* Ajusta a margem para telas pequenas */
+        margin-top: 300px; /* Ajusta a margem para telas pequenas */
     }
 
     .box-contatos-left {
