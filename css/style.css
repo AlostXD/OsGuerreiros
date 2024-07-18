@@ -887,17 +887,21 @@ h2 {
 
     .container {
         width: 100%;
-        height: auto;
     }
 
-    .home, .junte, .server, .faq, .adm, .patrocinio, .contatos {
+    .home, .sobre, .junte, .server, .faq, .adm, .patrocinio, .contatos {
         height: auto;
         min-height: 100vh;
+        margin: 0;
     }
 
     .background {
         max-width: 100%;
         left: 0;
+    }
+
+    .navbar {
+        display: block;
     }
 
     .navbar-item a {
@@ -945,8 +949,7 @@ h2 {
         grid-template-columns: 1fr;
     }
 
-    .modal-content-server,
-    .modal-content-adm {
+    .modal-content-server, .modal-content-adm {
         flex-direction: column;
     }
 
@@ -978,10 +981,6 @@ h2 {
         gap: 20px;
     }
 
-    .home, .sobre, .junte, .server, .faq, .adm, .patrocinio, .contatos {
-        margin: 120px auto;
-    }
-
     .card-headstaff {
         flex-direction: column;
         gap: 20px;
@@ -992,10 +991,9 @@ h2 {
     }
 }
 
-@media (max-width: 260px) {
-    
+@media (max-width: 400px) {
     .home, .sobre, .junte, .server, .faq, .adm, .patrocinio, .contatos {
-        margin: 500px auto;
+        margin: 0; /* Ajusta a margem para telas pequenas */
     }
 
     .box-contatos-left {
