@@ -992,14 +992,14 @@ h2 {
     }
 }
 
-@media (max-width: 260px) {
+@media (max-width: 500px) {
     
     .home, .sobre, .junte, .server, .faq, .adm, .patrocinio, .contatos {
         margin: 500px auto;
     }
 
     .junte {
-        margin: 500px auto;
+        margin-top: 500px;
     }
 
     .box-contatos-left {
