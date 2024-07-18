@@ -95,7 +95,7 @@ dialog {
     background-size: cover;
 }
 
-.home, .junte, .server, .faq, .adm, .patrocinio, .contatos {
+.home, .sobre, .junte, .server, .faq, .adm, .patrocinio, .contatos {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -971,7 +971,7 @@ h2 {
         gap: 20px;
     }
 
-    .home, .junte, .server, .faq, .adm, .patrocinio, .contatos {
+    .home, .sobre, .junte, .server, .faq, .adm, .patrocinio, .contatos {
         margin: 120px auto;
     }
 
