@@ -1082,6 +1082,7 @@ h2 {
 
     .buttons-patrocinio dialog {
         max-width: 80%;
+        padding-top: 400px;
         height: 100%;
     }
 }
