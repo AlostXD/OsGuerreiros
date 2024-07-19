@@ -847,40 +847,11 @@ h2 {
     border-radius: 12px;
     width: 100%;
 }
-/*
-@media (max-width: 768px) {
-    .container {
-        width: 100%;
-        height: auto;
-    }
 
-    .home-logo-btns {
-        gap: 10px;
-    }
-
-    .btns-home {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .junte-content {
-        height: 100vh;
-    }
-
-    .content-junte-cards {
-        grid-template-columns: 1fr 1fr;
-        max-width: 100%;
-    }
-
-    .modal-content-server, .modal-content-adm {
-        flex-direction: column;
-    }
-
-    .patrocinio-box {
-        grid-template-columns: 1fr; 
-    }
+.home, .junte, .server, .faq, .adm, .patrocinio, .contatos {
+    height: auto;
+    min-height: 50vh;
 }
-*/
 
 /* Responsiveness */
 
@@ -905,6 +876,16 @@ h2 {
         align-items: center;
         gap: 20px;
     }
+
+    .contatos-content {
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .logo {
+        max-width: 200px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -915,11 +896,6 @@ h2 {
     .container {
         width: 100%;
         height: auto;
-    }
-
-    .home, .junte, .server, .faq, .adm, .patrocinio, .contatos {
-        height: auto;
-        min-height: 100vh;
     }
 
     .background {
