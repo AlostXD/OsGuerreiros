@@ -20,6 +20,7 @@ backdrop.addEventListener('click', fechar);
 function abrirModal(modalID) {
     let modal = document.getElementById(modalID);
     if(modal){
+        modal.style.display = 'flex'; // Add "Flex" display to the modal
         modal.showModal();
     } else {
         console.log('Modal não encontrado');
@@ -29,6 +30,7 @@ function abrirModal(modalID) {
 function fecharModal(modalID) {
     let modal = document.getElementById(modalID);
     if(modal){
+        modal.style.display = 'none'; // Remove "Flex" display from the modal
         modal.close();
     } else {
         console.log('Modal não encontrado');
