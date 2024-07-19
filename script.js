@@ -15,6 +15,7 @@ function fechar() {
     abrirNav.style.display = 'flex';
 }
 
+backdrop.addEventListener('click', fechar);
 
 function abrirModal(modalID) {
     let modal = document.getElementById(modalID);

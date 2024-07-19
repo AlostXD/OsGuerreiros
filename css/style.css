@@ -915,13 +915,20 @@ h2 {
     }
 
     .navbar-content {
-        justify-content: center;
-        gap: 80px;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        height: 100vh;
     }
 
-    .navbar a {
-        flex-direction: row;
-        gap: 10px;
+    .navbar-content.active {
+        display: flex;
+    }
+
+    #btn-navbar-abrir {
+        display: flex;
     }
 
     .navbar img {
