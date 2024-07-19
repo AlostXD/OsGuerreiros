@@ -1071,6 +1071,10 @@ h2 {
     #9 {
         max-width: 95%;
     }
+
+    .btns-home {
+        max-width: 40%;
+    }
 }
 
 
