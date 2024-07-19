@@ -1084,8 +1084,16 @@ h2 {
         max-width: 80%;
         height: 100%;
     }
+}
 
+@media (max-width: 361px) {
     .patrocinio-modal-text {
-        padding-top: 80px;
+        padding-top: 400px;
+    }
+
+    #9 {
+        max-width: 95%;
     }
 }
+
+
