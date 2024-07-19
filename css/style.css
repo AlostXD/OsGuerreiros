@@ -774,7 +774,7 @@ h2 {
 .patrocinio-modal-text ol {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 
 
@@ -884,7 +884,7 @@ h2 {
 
 /* Responsiveness */
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
     .modal-content-adm {
         flex-direction: column;
         justify-content: center;
