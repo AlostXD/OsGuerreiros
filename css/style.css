@@ -1079,4 +1079,9 @@ h2 {
     #discord-panel {
         width: 250px;
     }
+
+    .buttons-patrocinio dialog {
+        max-width: 80%;
+        height: 100%;
+    }
 }
