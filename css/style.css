@@ -926,7 +926,7 @@ h2 {
     .navbar-list {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 40px;
     }
 
     .navbar-content.active {
@@ -956,6 +956,10 @@ h2 {
         gap: 10px;
         padding: 5px;
         max-width: 60%;
+    }
+
+    .modal-image img {
+        max-width: 150px;
     }
 
     .home-logo-btns {
