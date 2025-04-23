@@ -3,19 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 
-import Home from "./home";
-import Sobre from "./sobre";
-import Estatuto from "./estatuto";
-// Importe os outros componentes conforme necessário
-
 export default function Navbar() {
-    const [isOpen, setIsOpen] = useState(false); // Alterado para false
-    const [activeComponent, setActiveComponent] = useState<React.ReactElement | null>(<Home />);
-
-    const handleNavigation = (component: React.ReactElement) => {
-        setActiveComponent(component);
-        setIsOpen(false); // Fecha o menu ao clicar
-    };
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
         <>
@@ -38,22 +27,13 @@ export default function Navbar() {
                         </span>
                     </button>
                     <ul className="flex flex-col gap-4 mt-8">
-                        <li
-                            onClick={() => handleNavigation(<Home />)}
-                            className="hover:text-osg-orange transition-colors cursor-pointer"
-                        >
+                        <li className="hover:text-osg-orange transition-colors cursor-pointer">
                             Home
                         </li>
-                        <li
-                            onClick={() => handleNavigation(<Sobre />)}
-                            className="hover:text-osg-orange transition-colors cursor-pointer"
-                        >
+                        <li className="hover:text-osg-orange transition-colors cursor-pointer">
                             Sobre
                         </li>
-                        <li
-                            onClick={() => handleNavigation(<Estatuto />)}
-                            className="hover:text-osg-orange transition-colors cursor-pointer"
-                        >
+                        <li className="hover:text-osg-orange transition-colors cursor-pointer">
                             Estatuto
                         </li>
                         {/* Adicione os outros itens de navegação aqui */}
@@ -81,9 +61,6 @@ export default function Navbar() {
                     </span>
                 </button>
             )}
-
-            {/* Render Active Component */}
-            <div className={`${isOpen} p-4`}>{activeComponent}</div>
         </>
     );
 }
