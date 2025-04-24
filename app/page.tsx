@@ -1,3 +1,4 @@
+import Faq from "./components/faq";
 import Home from "./components/home";
 import Juntese from "./components/juntese";
 import Navbar from "./components/navbar";
@@ -12,6 +13,7 @@ export default function Page() {
       <Sobre />
       <Juntese />
       <Servidores />
+      <Faq />
     </>
   );
 }
