@@ -32,6 +32,7 @@ export default function Home() {
           height={150}
           alt="Team Os Guerreiros"
           className="w-full max-w-xs"
+          unoptimized
         />
           </Link>
           <Link href="https://osg.cx/equipe-academia" target="_blank">
@@ -41,6 +42,7 @@ export default function Home() {
           height={150}
           alt="Team Academia"
           className="w-full max-w-xs"
+          unoptimized
         />
           </Link>
         </div>
