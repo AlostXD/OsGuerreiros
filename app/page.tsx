@@ -1,4 +1,5 @@
 import Home from "./components/home";
+import Juntese from "./components/juntese";
 import Navbar from "./components/navbar";
 import Sobre from "./components/sobre";
 
@@ -8,6 +9,7 @@ export default function Page() {
       <Navbar />
       <Home />
       <Sobre />
+      <Juntese />
     </>
   );
 }
