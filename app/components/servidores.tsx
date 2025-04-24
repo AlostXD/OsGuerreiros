@@ -26,7 +26,7 @@ export default function Servidores() {
                 <ul className='flex flex-col justify-center gap-2 p-4 list-disc'>
                     <li><strong>Explore um universo de possibilidades:</strong> Oferecemos uma variedade de jogos e modos para todos os gostos.</li>
                     <li><strong>Servidores Otimizados:</strong> Nossos servidores são otimizados para streamers.</li>
-                    <li><strong>Servidores confiáveis e sem atrasos:</strong>  Estabilidade é crucial para uma experiência de jogo perfeita. Os servidores da HostHavoc são super confiáveis e têm a melhor tecnologia para garantir uma conexão suave e sem atrasos. Assim, você pode se concentrar no que realmente importa.</li>
+                    <li><strong>Servidores confiáveis e sem atrasos:</strong> Estabilidade é crucial para uma experiência de jogo perfeita. Os servidores da HostHavoc são super confiáveis e têm a melhor tecnologia para garantir uma conexão suave e sem atrasos. Assim, você pode se concentrar no que realmente importa.</li>
                 </ul>
                 <h3 className='text-osg-orange font-bold text-xl'>Como jogar</h3>
                 <p>Para jogar em nossos servidores é muito simples, basta entrar no Discord, conferir a categoria 'Servidores'. Lá você vai encontrar tudo o que precisa para jogar com a gente.</p>
