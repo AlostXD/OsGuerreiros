@@ -98,7 +98,7 @@ export default function Faq() {
     ];
 
     return (
-        <div className="min-h-screen flex flex-col md:flex-row items-center justify-between max-w-[90%] md:max-w-[60%] p-4 m-auto">
+        <div className="min-h-screen flex flex-col md:flex-row items-center justify-between max-w-[90%] md:max-w-[60%] p-4 m-auto" id='faq'>
             <Image
                 src="/mascote.webp"
                 width={300}
@@ -106,7 +106,7 @@ export default function Faq() {
                 alt="Mascote"
                 quality={100} // Ensures the highest quality for the image
                 priority // Loads the image with higher priority
-                className="mb-6 md:mb-0"
+                className="mb-6 md:mb-0 static"
             />
             <div className="flex flex-col gap-4 items-center justify-center w-full">
                 <h1 className="text-osg-orange font-bold text-2xl md:text-3xl text-center">FAQ</h1>

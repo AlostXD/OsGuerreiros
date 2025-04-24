@@ -16,7 +16,7 @@ export default function Servidores() {
 
     return (
         <>
-            <div className="min-h-screen flex flex-col items-center p-8 gap-4">
+            <div className="min-h-screen flex flex-col items-center p-8 gap-4" id='servidores-de-games'>
             <h1 className='text-osg-orange font-bold text-3xl'>Servidores de Games</h1>
             <h3 className='italic underline'>Oferecimento Host Havoc</h3>
             <div className="flex justify-between items-center gap-4 m-auto max-w-[70%] flex-col md:flex-row">

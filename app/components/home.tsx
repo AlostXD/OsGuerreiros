@@ -16,7 +16,7 @@ export default function Home() {
           quality={100}
         />
       </div>
-      <div className="flex flex-col items-center justify-center m-auto min-h-screen">
+      <div className="flex flex-col items-center justify-center m-auto min-h-screen" id='home'>
         <Image
           src="/logo.webp"
           width={300}

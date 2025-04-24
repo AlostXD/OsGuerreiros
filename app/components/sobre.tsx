@@ -3,7 +3,7 @@ import React from 'react'
 export default function Sobre() {
   return (
     <>
-      <div className="bg-[url(/bg-sobre.webp)] bg-cover bg-center bg-local flex flex-col items-center justify-center min-h-screen">
+      <div className="bg-[url(/bg-sobre.webp)] bg-cover bg-center bg-local flex flex-col items-center justify-center min-h-screen" id='sobre'>
         <div className="w-fit max-w-[800px] p-6 relative">
           <h1 className='text-2xl text-osg-orange font-extrabold'>Quem são os Guerreiros?</h1>
           <p>

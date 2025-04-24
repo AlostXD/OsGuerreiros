@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function Juntese() {
   return (
     <>
-        <div className="min-h-screen flex flex-col items-center justify-center p-8 gap-7 m-auto">
+        <div className="min-h-screen flex flex-col items-center justify-center p-8 gap-7 m-auto" id='junte-se'>
             <h2 className='font-bold text-2xl text-center'>Você é um streamer apaixonado pelo o que faz?</h2>
             <h1 className='font-bold text-3xl text-osg-orange text-center'>Faça parte da equipe Os Guerreiros!</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 m-auto max-w-[80%] items-center justify-items-center">
