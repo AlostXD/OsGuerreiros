@@ -23,9 +23,9 @@ export default function Navbar() {
                     >
                         <p className="block text-center">Fechar</p>
                         <span className="flex flex-col gap-1 bg-osg-orange p-2 rounded-md">
-                            <div className="bg-white p-0.5 w-8"></div>
-                            <div className="bg-white p-0.5 w-8"></div>
-                            <div className="bg-white p-0.5 w-8"></div>
+                            <div className="bg-white p-0.5 w-6"></div>
+                            <div className="bg-white p-0.5 w-6"></div>
+                            <div className="bg-white p-0.5 w-6"></div>
                         </span>
                     </button>
                     <ul className="flex flex-col gap-4 mt-8">
@@ -119,9 +119,9 @@ export default function Navbar() {
                     className="fixed flex items-center gap-2 top-4 left-4 text-white px-4 py-2 rounded-md hover:cursor-pointer hover:scale-105 transition-transform duration-300"
                 >
                     <span className="flex flex-col gap-1 bg-osg-orange p-2 rounded-md">
-                        <div className="bg-white p-0.5 w-8"></div>
-                        <div className="bg-white p-0.5 w-8"></div>
-                        <div className="bg-white p-0.5 w-8"></div>
+                        <div className="bg-white p-0.5 w-6"></div>
+                        <div className="bg-white p-0.5 w-6"></div>
+                        <div className="bg-white p-0.5 w-6"></div>
                     </span>
                 </button>
             )}

@@ -1,3 +1,4 @@
+import Adm from "./components/adm";
 import Faq from "./components/faq";
 import Home from "./components/home";
 import Juntese from "./components/juntese";
@@ -14,6 +15,7 @@ export default function Page() {
       <Juntese />
       <Servidores />
       <Faq />
+      <Adm />
     </>
   );
 }
