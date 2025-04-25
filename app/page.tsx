@@ -12,7 +12,9 @@ import ScrollWrapper from "./components/ScrollWrapper";
 export default function Page() {
   return (
     <>
-      <Navbar />
+      <div className="interactive"> {/* Adiciona a classe interactive */}
+        <Navbar />
+      </div>
       <ScrollWrapper>
         <Home />
         <Sobre />

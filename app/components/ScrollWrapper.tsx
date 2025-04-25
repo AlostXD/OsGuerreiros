@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 
 interface ScrollWrapperProps {
     children: React.ReactNode[];
@@ -8,12 +8,12 @@ interface ScrollWrapperProps {
 
 export default function ScrollWrapper({ children }: ScrollWrapperProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const isScrolling = useRef(false); // Usar useRef para evitar re-renderizações desnecessárias
+    const [isScrolling, setIsScrolling] = useState(false);
 
     const handleScroll = (event: WheelEvent) => {
-        if (isScrolling.current) return;
+        if (isScrolling) return;
 
-        isScrolling.current = true;
+        setIsScrolling(true);
 
         if (event.deltaY > 0 && currentIndex < children.length - 1) {
             setCurrentIndex((prevIndex) => prevIndex + 1);
@@ -21,21 +21,15 @@ export default function ScrollWrapper({ children }: ScrollWrapperProps) {
             setCurrentIndex((prevIndex) => prevIndex - 1);
         }
 
-        setTimeout(() => {
-            isScrolling.current = false; // Desbloqueia a rolagem após 1 segundo
-        }, 1000);
+        setTimeout(() => setIsScrolling(false), 1000); // Bloqueia a rolagem por 1 segundo
     };
 
     useEffect(() => {
-        const preventDefault = (e: WheelEvent) => e.preventDefault(); // Previne o comportamento padrão da rolagem
         window.addEventListener("wheel", handleScroll, { passive: false });
-        window.addEventListener("wheel", preventDefault, { passive: false });
-
         return () => {
             window.removeEventListener("wheel", handleScroll);
-            window.removeEventListener("wheel", preventDefault);
         };
-    }, [currentIndex]);
+    }, [currentIndex, isScrolling]);
 
     return (
         <div className="relative h-screen w-screen overflow-hidden">
@@ -47,7 +41,7 @@ export default function ScrollWrapper({ children }: ScrollWrapperProps) {
                 }}
             >
                 {children.map((child, index) => (
-                    <div key={index} className="h-screen w-screen">
+                    <div key={index} className="min-h-screen w-screen">
                         {child}
                     </div>
                 ))}

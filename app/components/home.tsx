@@ -6,7 +6,10 @@ import Patrocinadores from './adds/patrocinadores';
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col min-h-screen bg-[url(/bg-home.webp)] bg-cover bg-center id='home'">
+      <div
+        id="home"
+        className="flex flex-col min-h-screen bg-[url(/bg-home.webp)] bg-cover bg-center"
+      >
         <div className="flex flex-col items-center justify-center m-auto static">
           <Image
             src="/logo.webp"
@@ -17,28 +20,28 @@ export default function Home() {
           />
           <div className="flex flex-wrap gap-4 mt-12 pt-8 justify-center">
             <Link href="https://osg.cx/equipe-osguerreiros" target="_blank">
-          <Image
-            src="/btn-team-osguerreiros.gif"
-            width={250}
-            height={150}
-            alt="Team Os Guerreiros"
-            className="w-full max-w-xs"
-            unoptimized
-          />
+              <Image
+                src="/btn-team-osguerreiros.gif"
+                width={250}
+                height={150}
+                alt="Team Os Guerreiros"
+                className="w-full max-w-xs"
+                unoptimized
+              />
             </Link>
             <Link href="https://osg.cx/equipe-academia" target="_blank">
-          <Image
-            src="/btn-team-academia.gif"
-            width={250}
-            height={150}
-            alt="Team Academia"
-            className="w-full max-w-xs"
-            unoptimized
-          />
+              <Image
+                src="/btn-team-academia.gif"
+                width={250}
+                height={150}
+                alt="Team Academia"
+                className="w-full max-w-xs"
+                unoptimized
+              />
             </Link>
           </div>
           <Patrocinadores />
-        <div className="flex flex-col gap-2 items-center justify-center pt-40">
+          <div className="flex flex-col gap-2 items-center justify-center pt-40">
             <span>
               <Image
                 src="/ico-scroll.webp"

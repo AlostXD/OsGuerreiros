@@ -8,6 +8,14 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
+    const handleNavigation = (id: string) => {
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+        setIsOpen(false);
+    };
+
     return (
         <>
             {/* Navbar */}
@@ -29,11 +37,17 @@ export default function Navbar() {
                         </span>
                     </button>
                     <ul className="flex flex-col gap-4 mt-8">
-                        <li className="hover:text-osg-orange transition-colors cursor-pointer">
-                            <Link href="#home">Home</Link>
+                        <li
+                            className="hover:text-osg-orange transition-colors cursor-pointer"
+                            onClick={() => handleNavigation("home")}
+                        >
+                            Home
                         </li>
-                        <li className="hover:text-osg-orange transition-colors cursor-pointer">
-                            <Link href="#sobre">Sobre</Link>
+                        <li
+                            className="hover:text-osg-orange transition-colors cursor-pointer"
+                            onClick={() => handleNavigation("sobre")}
+                        >
+                            Sobre
                         </li>
                         <li className="relative cursor-pointer">
                             <div className="relative">
@@ -83,23 +97,41 @@ export default function Navbar() {
                                 )}
                             </div>
                         </li>
-                        <li className="hover:text-osg-orange transition-colors cursor-pointer">
-                            <Link href="#junte-se">Junte-se</Link>
+                        <li
+                            className="hover:text-osg-orange transition-colors cursor-pointer"
+                            onClick={() => handleNavigation("junte-se")}
+                        >
+                            Junte-se
                         </li>
-                        <li className="hover:text-osg-orange transition-colors cursor-pointer">
-                            <Link href="#servidores-de-games">Servidores de Games</Link>
+                        <li
+                            className="hover:text-osg-orange transition-colors cursor-pointer"
+                            onClick={() => handleNavigation("servidores-de-games")}
+                        >
+                            Servidores de Games
                         </li>
-                        <li className="hover:text-osg-orange transition-colors cursor-pointer">
-                            <Link href="#faq">F.A.Q</Link>
+                        <li
+                            className="hover:text-osg-orange transition-colors cursor-pointer"
+                            onClick={() => handleNavigation("faq")}
+                        >
+                            F.A.Q
                         </li>
-                        <li className="hover:text-osg-orange transition-colors cursor-pointer">
-                            <Link href="#administracao">Administração</Link>
+                        <li
+                            className="hover:text-osg-orange transition-colors cursor-pointer"
+                            onClick={() => handleNavigation("administracao")}
+                        >
+                            Administração
                         </li>
-                        <li className="hover:text-osg-orange transition-colors cursor-pointer">
-                            <Link href="#patrocinadores">Patrocinadores</Link>
+                        <li
+                            className="hover:text-osg-orange transition-colors cursor-pointer"
+                            onClick={() => handleNavigation("patrocinadores")}
+                        >
+                            Patrocinadores
                         </li>
-                        <li className="hover:text-osg-orange transition-colors cursor-pointer">
-                            <Link href="#contato">Contatos</Link>
+                        <li
+                            className="hover:text-osg-orange transition-colors cursor-pointer"
+                            onClick={() => handleNavigation("contato")}
+                        >
+                            Contatos
                         </li>
                     </ul>
                     <Image
