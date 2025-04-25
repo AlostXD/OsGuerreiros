@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 interface ScrollWrapperProps {
     children: React.ReactNode[];
@@ -8,12 +8,12 @@ interface ScrollWrapperProps {
 
 export default function ScrollWrapper({ children }: ScrollWrapperProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [isScrolling, setIsScrolling] = useState(false);
+    const isScrolling = useRef(false); // Usar useRef para evitar re-renderizações desnecessárias
 
     const handleScroll = (event: WheelEvent) => {
-        if (isScrolling) return;
+        if (isScrolling.current) return;
 
-        setIsScrolling(true);
+        isScrolling.current = true;
 
         if (event.deltaY > 0 && currentIndex < children.length - 1) {
             setCurrentIndex((prevIndex) => prevIndex + 1);
@@ -21,15 +21,21 @@ export default function ScrollWrapper({ children }: ScrollWrapperProps) {
             setCurrentIndex((prevIndex) => prevIndex - 1);
         }
 
-        setTimeout(() => setIsScrolling(false), 1000); // Bloqueia a rolagem por 1 segundo
+        setTimeout(() => {
+            isScrolling.current = false; // Desbloqueia a rolagem após 1 segundo
+        }, 1000);
     };
 
     useEffect(() => {
+        const preventDefault = (e: WheelEvent) => e.preventDefault(); // Previne o comportamento padrão da rolagem
         window.addEventListener("wheel", handleScroll, { passive: false });
+        window.addEventListener("wheel", preventDefault, { passive: false });
+
         return () => {
             window.removeEventListener("wheel", handleScroll);
+            window.removeEventListener("wheel", preventDefault);
         };
-    }, [currentIndex, isScrolling]);
+    }, [currentIndex]);
 
     return (
         <div className="relative h-screen w-screen overflow-hidden">
