@@ -99,7 +99,7 @@ export default function Navbar() {
                             <Link href="#patrocinadores">Patrocinadores</Link>
                         </li>
                         <li className="hover:text-osg-orange transition-colors cursor-pointer">
-                            <Link href="#contatos">Contatos</Link>
+                            <Link href="#contato">Contatos</Link>
                         </li>
                     </ul>
                     <Image

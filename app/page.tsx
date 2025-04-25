@@ -1,4 +1,5 @@
 import Adm from "./components/adm";
+import Contato from "./components/contato";
 import Faq from "./components/faq";
 import Home from "./components/home";
 import Juntese from "./components/juntese";
@@ -18,6 +19,7 @@ export default function Page() {
       <Faq />
       <Adm />
       <Patrocinios />
+      <Contato />
     </>
   );
 }
