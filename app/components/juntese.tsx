@@ -7,7 +7,7 @@ export default function Juntese() {
         <div className="min-h-screen flex flex-col items-center justify-center p-8 gap-7 m-auto" id='junte-se'>
             <h2 className='font-bold text-2xl text-center'>Você é um streamer apaixonado pelo o que faz?</h2>
             <h1 className='font-bold text-3xl text-osg-orange text-center'>Faça parte da equipe Os Guerreiros!</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 m-auto max-w-[80%] items-center justify-items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 m-auto max-w-full md:max-w-[80%] items-center justify-items-center">
                 <li className='flex flex-col gap-4 bg-osg-orange/60 p-4 rounded-lg w-[80%] h-[100%]'>
                     <h3 className='font-bold text-2xl text-center'>Requisitos para entrada</h3>
                     <ul className='flex flex-col justify-center gap-2 p-4 list-disc'>
@@ -45,7 +45,7 @@ export default function Juntese() {
                     </ol>
                 </li>
             </div>
-            <Link href="https://osg.cx/discord-recrutamento" target='_blank' className='bg-osg-orange font-bold p-2 rounded-xl transition-transform duration-300 hover:scale-105'>Acesse o Discord de recrutamento </Link>
+            <Link href="https://osg.cx/discord-recrutamento" target='_blank' className='bg-osg-orange font-bold p-2 rounded-xl transition-transform duration-300 hover:scale-105 text-center'>Acesse o Discord de recrutamento </Link>
             <p>Queremos construir uma equipe diversificada e inclusiva, não importa se você é iniciante ou se já tem experiência em streaming, estamos interessados no seu entusiasmo e dedicação!</p>
         </div>
     </>

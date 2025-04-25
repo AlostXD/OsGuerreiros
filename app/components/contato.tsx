@@ -5,7 +5,7 @@ export default function Contato() {
   return (
     <>
         <div className="min-h-screen flex flex-col md:flex-row items-center justify-center p-8 gap-4 m-auto" id='contato'>
-            <div className="max-w-[80%] flex flex-col gap-4 justify-center p-4 m-auto">
+            <div className="md:max-w-[80%] flex flex-col gap-4 justify-center p-4 m-auto">
                 <div className="flex flex-col gap-4 items-center justify-center bg-osg-orange/45 rounded-lg p-4 w-full md:w-1/2">
                     <h1 className='text-3xl font-bold'>Contato</h1>
                     <p>Para qualquer dúvida, utilize os canais abaixo para saná-las:</p>
@@ -33,7 +33,7 @@ export default function Contato() {
                     </ul>
                 </div>
             </div>
-            <div className="flex flex-col gap-8 items-center justify-between w-full max-w-[40%] m-auto">
+            <div className="flex flex-col gap-8 items-center justify-between w-full max-w-[20%] md:max-w-[50%] m-auto">
                 <iframe src="https://discord.com/widget?id=352329060598284288&theme=dark"
                     frameBorder="0"
                     sandbox="allow-popups
@@ -43,7 +43,7 @@ export default function Contato() {
                     title="Discord Widget"
                 >
                 </iframe>
-                <div className="flex flex-col bg-osg-orange/45 rounded-lg p-4 gap-4 w-[350px]">
+                <div className="flex flex-col bg-osg-orange/45 rounded-lg p-4 gap-4 w-[250px] md:w-[350px]">
                     <h2 className='text-xl font-bold text-center'>Demais Links</h2>
                     <p><strong>Hub de Links:</strong> <Link href="https://osg.cx" target='_blank' className='underline'>https://osg.cx</Link></p>
                 </div>

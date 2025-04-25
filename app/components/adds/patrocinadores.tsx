@@ -14,7 +14,7 @@ export default function Patrocinadores() {
 
   return (
     <>
-        <div className="absolute right-0 top-0 m-12 bg-osg-orange/90 rounded-4xl flex flex-col p-2 gap-4">
+        <div className="md:absolute md:right-0 md:top-0 md:m-12 bg-osg-orange/90 md:rounded-4xl flex md:flex-col p-2 gap-4 mt-4">
             {patrocinadores.map((patrocinador) => (
                 <div key={patrocinador} className="">
                     <Image

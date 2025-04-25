@@ -45,7 +45,7 @@ export default function Servidores() {
             {/* Modais */}
             {modalAberto === 1 && (
             <div className="fixed inset-0 bg-black/90 flex items-center justify-center list-none">
-                <div className="bg-zinc-900 p-8 rounded-lg flex items-center justify-center relative">
+                <div className="bg-zinc-900 p-8 rounded-lg flex flex-col md:flex-row items-center justify-center relative">
                 <div className="flex flex-col gap-2 max-w-[400px]">
                     <li><strong className="text-osg-orange">Game:</strong> Euro Truck Simulator 2</li>
                     <li><strong className="text-osg-orange">Mapa:</strong> EAA (mapa da américa do sul)</li>
@@ -75,7 +75,7 @@ export default function Servidores() {
             )}
             {modalAberto === 2 && (
             <div className="fixed inset-0 bg-black/90 flex items-center justify-center list-none">
-                <div className="bg-zinc-900 p-8 rounded-lg flex items-center justify-center relative">
+                <div className="bg-zinc-900 p-8 rounded-lg flex flex-col md:flex-row items-center justify-center relative">
                 <div className="flex flex-col gap-2 max-w-[400px]">
                     <li><strong className="text-osg-orange">Game:</strong> ARK: Survival Evolved</li>
                     <li><strong className="text-osg-orange">Mapa:</strong> The Volcano</li>
@@ -105,7 +105,7 @@ export default function Servidores() {
             )}
             {modalAberto === 3 && (
             <div className="fixed inset-0 bg-black/90 flex items-center justify-center list-none">
-                <div className="bg-zinc-900 p-8 rounded-lg flex items-center justify-center relative">
+                <div className="bg-zinc-900 p-8 rounded-lg flex flex-col md:flex-row items-center justify-center relative">
                 <div className="flex flex-col gap-2 max-w-[400px]">
                     <li><strong className="text-osg-orange">Game:</strong> Minecraft 1.20.1 (Java Edition)</li>
                     <li><strong className="text-osg-orange">Mods:</strong> Nenhum</li>
@@ -134,7 +134,7 @@ export default function Servidores() {
             )}
             {modalAberto === 4 && (
             <div className="fixed inset-0 bg-black/90 flex items-center justify-center list-none">
-                <div className="bg-zinc-900 p-8 rounded-lg flex items-center justify-center relative">
+                <div className="bg-zinc-900 p-8 rounded-lg flex flex-col md:flex-row items-center justify-center relative">
                 <div className="flex flex-col gap-2 max-w-[400px]">
                     <li><strong className="text-osg-orange">Game:</strong> Valheim</li>
                     <li><strong className="text-osg-orange">Mods:</strong> Nenhum</li>

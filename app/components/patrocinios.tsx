@@ -148,7 +148,7 @@ export default function Patrocinios() {
             {/* Modal: Por que ser um patrocinador? */}
             {modalAberto === 100 && (
                 <div className="fixed inset-0 bg-black/90 flex items-center justify-center">
-                    <div className="bg-zinc-900 p-8 rounded-lg flex flex-col items-center justify-center relative max-w-[50%]">
+                    <div className="bg-zinc-900 p-8 rounded-lg flex flex-col items-center justify-center relative max-w-full md:max-w-[50%]">
                         <h2 className="text-xl font-bold text-osg-orange mb-4">Por que ser um patrocinador?</h2>
                         <ol className="list-decimal flex flex-col gap-2">
                             <li>Alcançar novos clientes e lançar novos produtos e/ou serviços;</li>
@@ -179,7 +179,7 @@ export default function Patrocinios() {
             {/* Modal: Como apoiar a equipe? */}
             {modalAberto === 101 && (
                 <div className="fixed inset-0 bg-black/90 flex items-center justify-center">
-                    <div className="bg-zinc-900 p-8 rounded-lg flex flex-col items-center justify-center relative max-w-[50%] gap-6">
+                    <div className="bg-zinc-900 p-8 rounded-lg flex flex-col items-center justify-center relative max-w-full md:max-w-[50%] gap-6">
                         <h2 className="text-xl font-bold text-osg-orange">Como apoiar a equipe?</h2>
                         <ol className="list-decimal flex flex-col gap-2">
                             <li>Ajuda financeira, que pode ser feita por meio de doação (caso de quantias pequenas) ou patrocínio financeiro (quantias grandes);</li>

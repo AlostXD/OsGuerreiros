@@ -12,7 +12,7 @@ export default function Navbar() {
         <>
             {/* Navbar */}
             <div
-                className={`bg-zinc-950 flex flex-col items-center p-4 fixed h-full top-0 z-50 transition-transform duration-300 overflow-hidden w-64 ${
+                className={`bg-zinc-950 flex flex-col items-center p-4 fixed h-full top-0 z-[1000] transition-transform duration-300 overflow-hidden w-64 ${
                     isOpen ? "translate-x-0" : "-translate-x-full"
                 }`}
             >
@@ -47,7 +47,7 @@ export default function Navbar() {
                                         width={20}
                                         height={40}
                                         alt="scroll"
-                                        quality={100} // Ensures the highest quality for the icon
+                                        quality={100}
                                         className={`transition-transform duration-300 ${
                                             dropdownOpen ? "rotate-180" : "rotate-0"
                                         } ml-6`}
@@ -116,7 +116,7 @@ export default function Navbar() {
             {!isOpen && (
                 <button
                     onClick={() => setIsOpen(true)}
-                    className="fixed flex items-center gap-2 top-4 left-4 text-white px-4 py-2 rounded-md hover:cursor-pointer hover:scale-105 transition-transform duration-300"
+                    className="fixed flex items-center gap-2 top-4 left-4 text-white px-4 py-2 rounded-md hover:cursor-pointer hover:scale-105 transition-transform duration-300 z-[1000]"
                 >
                     <span className="flex flex-col gap-1 bg-osg-orange p-2 rounded-md">
                         <div className="bg-white p-0.5 w-6"></div>

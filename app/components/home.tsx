@@ -6,7 +6,6 @@ import Patrocinadores from './adds/patrocinadores';
 export default function Home() {
   return (
     <>
-      <Patrocinadores />
       <div className="flex flex-col min-h-screen bg-[url(/bg-home.webp)] bg-cover bg-center id='home'">
         <div className="flex flex-col items-center justify-center m-auto static">
           <Image
@@ -38,6 +37,7 @@ export default function Home() {
           />
             </Link>
           </div>
+          <Patrocinadores />
         <div className="flex flex-col gap-2 items-center justify-center pt-40">
             <span>
               <Image

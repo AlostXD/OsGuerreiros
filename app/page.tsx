@@ -7,19 +7,22 @@ import Navbar from "./components/navbar";
 import Patrocinios from "./components/patrocinios";
 import Servidores from "./components/servidores";
 import Sobre from "./components/sobre";
+import ScrollWrapper from "./components/ScrollWrapper";
 
 export default function Page() {
   return (
     <>
       <Navbar />
-      <Home />
-      <Sobre />
-      <Juntese />
-      <Servidores />
-      <Faq />
-      <Adm />
-      <Patrocinios />
-      <Contato />
+      <ScrollWrapper>
+        <Home />
+        <Sobre />
+        <Juntese />
+        <Servidores />
+        <Faq />
+        <Adm />
+        <Patrocinios />
+        <Contato />
+      </ScrollWrapper>
     </>
   );
 }
