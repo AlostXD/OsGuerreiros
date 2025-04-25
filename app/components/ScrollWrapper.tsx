@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 interface ScrollWrapperProps {
     children: React.ReactNode[];
@@ -9,9 +9,11 @@ interface ScrollWrapperProps {
 export default function ScrollWrapper({ children }: ScrollWrapperProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isScrolling, setIsScrolling] = useState(false);
+    const [isMobile, setIsMobile] = useState(false); // Estado para verificar se é um dispositivo móvel
+    const touchStartY = useRef<number | null>(null);
 
     const handleScroll = (event: WheelEvent) => {
-        if (isScrolling) return;
+        if (isScrolling || isMobile) return; // Desativa o scroll personalizado em dispositivos móveis
 
         setIsScrolling(true);
 
@@ -21,15 +23,59 @@ export default function ScrollWrapper({ children }: ScrollWrapperProps) {
             setCurrentIndex((prevIndex) => prevIndex - 1);
         }
 
-        setTimeout(() => setIsScrolling(false), 1000); // Bloqueia a rolagem por 1 segundo
+        setTimeout(() => setIsScrolling(false), 1000);
+    };
+
+    const handleTouchStart = (event: TouchEvent) => {
+        if (isMobile) return; // Desativa o comportamento de toque em dispositivos móveis
+        touchStartY.current = event.touches[0].clientY;
+    };
+
+    const handleTouchMove = (event: TouchEvent) => {
+        if (isScrolling || touchStartY.current === null || isMobile) return;
+
+        const touchEndY = event.touches[0].clientY;
+        const deltaY = touchStartY.current - touchEndY;
+
+        setIsScrolling(true);
+
+        if (deltaY > 50 && currentIndex < children.length - 1) {
+            setCurrentIndex((prevIndex) => prevIndex + 1);
+        } else if (deltaY < -50 && currentIndex > 0) {
+            setCurrentIndex((prevIndex) => prevIndex - 1);
+        }
+
+        setTimeout(() => setIsScrolling(false), 1000);
+        touchStartY.current = null;
     };
 
     useEffect(() => {
-        window.addEventListener("wheel", handleScroll, { passive: false });
-        return () => {
-            window.removeEventListener("wheel", handleScroll);
+        // Verifica se a tela é pequena (exemplo: largura menor que 768px)
+        const checkIfMobile = () => {
+            setIsMobile(window.innerWidth < 768);
         };
-    }, [currentIndex, isScrolling]);
+
+        checkIfMobile();
+        window.addEventListener("resize", checkIfMobile);
+
+        if (!isMobile) {
+            window.addEventListener("wheel", handleScroll, { passive: false });
+            window.addEventListener("touchstart", handleTouchStart, { passive: false });
+            window.addEventListener("touchmove", handleTouchMove, { passive: false });
+        }
+
+        return () => {
+            window.removeEventListener("resize", checkIfMobile);
+            window.removeEventListener("wheel", handleScroll);
+            window.removeEventListener("touchstart", handleTouchStart);
+            window.removeEventListener("touchmove", handleTouchMove);
+        };
+    }, [currentIndex, isScrolling, isMobile]);
+
+    if (isMobile) {
+        // Retorna os filhos normalmente sem lógica de scroll em dispositivos móveis
+        return <div>{children}</div>;
+    }
 
     return (
         <div className="relative h-screen w-screen overflow-hidden">
