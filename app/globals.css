@@ -3,5 +3,6 @@
 
 @theme {
   --color-osg-orange: #EE620C;
+  --font-poppins: var(--font-poppins);
 }
 

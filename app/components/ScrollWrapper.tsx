@@ -3,21 +3,30 @@
 import React, { useState, useEffect, useRef } from "react";
 
 interface ScrollWrapperProps {
-    children: React.ReactNode[];
+    children: React.ReactNode[]; // Lista de filhos
+    isModalOpen?: boolean; // Verifica se um modal está aberto
 }
 
-export default function ScrollWrapper({ children }: ScrollWrapperProps) {
+export default function ScrollWrapper({ children, isModalOpen }: ScrollWrapperProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isScrolling, setIsScrolling] = useState(false);
-    const [isMobile, setIsMobile] = useState(false); // Estado para verificar se é um dispositivo móvel
+    const [isMobile, setIsMobile] = useState(false);
     const touchStartY = useRef<number | null>(null);
 
+    const validChildren = React.Children.toArray(children).filter(
+        (child) => React.isValidElement(child) // Filtra apenas filhos válidos
+    );
+
     const handleScroll = (event: WheelEvent) => {
-        if (isScrolling || isMobile) return; // Desativa o scroll personalizado em dispositivos móveis
+        if (isScrolling || isMobile || isModalOpen) return;
+
+        const target = event.target as HTMLElement;
+
+        if (target.closest(".modal") || target.closest(".interactive")) return;
 
         setIsScrolling(true);
 
-        if (event.deltaY > 0 && currentIndex < children.length - 1) {
+        if (event.deltaY > 0 && currentIndex < validChildren.length - 1) {
             setCurrentIndex((prevIndex) => prevIndex + 1);
         } else if (event.deltaY < 0 && currentIndex > 0) {
             setCurrentIndex((prevIndex) => prevIndex - 1);
@@ -27,19 +36,19 @@ export default function ScrollWrapper({ children }: ScrollWrapperProps) {
     };
 
     const handleTouchStart = (event: TouchEvent) => {
-        if (isMobile) return; // Desativa o comportamento de toque em dispositivos móveis
+        if (isMobile || isModalOpen) return;
         touchStartY.current = event.touches[0].clientY;
     };
 
     const handleTouchMove = (event: TouchEvent) => {
-        if (isScrolling || touchStartY.current === null || isMobile) return;
+        if (isScrolling || touchStartY.current === null || isMobile || isModalOpen) return;
 
         const touchEndY = event.touches[0].clientY;
         const deltaY = touchStartY.current - touchEndY;
 
         setIsScrolling(true);
 
-        if (deltaY > 50 && currentIndex < children.length - 1) {
+        if (deltaY > 50 && currentIndex < validChildren.length - 1) {
             setCurrentIndex((prevIndex) => prevIndex + 1);
         } else if (deltaY < -50 && currentIndex > 0) {
             setCurrentIndex((prevIndex) => prevIndex - 1);
@@ -50,7 +59,6 @@ export default function ScrollWrapper({ children }: ScrollWrapperProps) {
     };
 
     useEffect(() => {
-        // Verifica se a tela é pequena (exemplo: largura menor que 768px)
         const checkIfMobile = () => {
             setIsMobile(window.innerWidth < 768);
         };
@@ -70,11 +78,10 @@ export default function ScrollWrapper({ children }: ScrollWrapperProps) {
             window.removeEventListener("touchstart", handleTouchStart);
             window.removeEventListener("touchmove", handleTouchMove);
         };
-    }, [currentIndex, isScrolling, isMobile]);
+    }, [currentIndex, isScrolling, isMobile, isModalOpen]);
 
     if (isMobile) {
-        // Retorna os filhos normalmente sem lógica de scroll em dispositivos móveis
-        return <div>{children}</div>;
+        return <div>{validChildren}</div>;
     }
 
     return (
@@ -86,7 +93,7 @@ export default function ScrollWrapper({ children }: ScrollWrapperProps) {
                     transition: "transform 0.8s ease-in-out",
                 }}
             >
-                {children.map((child, index) => (
+                {validChildren.map((child, index) => (
                     <div key={index} className="min-h-screen w-screen">
                         {child}
                     </div>
