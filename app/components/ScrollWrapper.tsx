@@ -60,7 +60,7 @@ export default function ScrollWrapper({ children, isModalOpen }: ScrollWrapperPr
 
     useEffect(() => {
         const checkIfMobile = () => {
-            setIsMobile(window.innerWidth < 768);
+            setIsMobile(window.innerWidth < 1281);
         };
 
         checkIfMobile();

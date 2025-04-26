@@ -7,8 +7,8 @@ export default function Juntese() {
         <div className="min-h-screen flex flex-col items-center justify-center p-8 gap-7 m-auto" id='junte-se'>
             <h2 className='font-bold text-2xl text-center'>Você é um streamer apaixonado pelo o que faz?</h2>
             <h1 className='font-bold text-3xl text-osg-orange text-center'>Faça parte da equipe Os Guerreiros!</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 m-auto max-w-full md:max-w-[80%] items-center justify-items-center">
-                <li className='flex flex-col gap-4 bg-osg-orange/60 p-4 rounded-lg w-[80%] h-[100%]'>
+            <div className="flex flex-wrap flex-col lg:flex-row justify-center gap-4 m-auto max-w-full md:max-w-[80%]"> {/* Alterado para flex */}
+                <li className='flex flex-col justify-center items-center gap-4 bg-osg-orange/60 p-4 rounded-lg flex-grow-0 flex-shrink-0 basis-[45%] min-h-[300px] max-h-[400px]'> {/* Tamanho consistente */}
                     <h3 className='font-bold text-2xl text-center'>Requisitos para entrada</h3>
                     <ul className='flex flex-col justify-center gap-2 p-4 list-disc'>
                         <li>Ser um streamer de frequência casual ou profissional, manter o canal ativo.</li>
@@ -16,7 +16,7 @@ export default function Juntese() {
                     </ul>
                     <p>Para saber todos os requisitos de cada divisão, consulte nosso estatuto ou vá direto para o nosso discord de recrutamento.</p>
                 </li>
-                <li className='flex flex-col gap-4 bg-osg-orange/60 p-4 rounded-lg w-[80%] h-[100%]'>
+                <li className='flex flex-col justify-center items-center gap-4 bg-osg-orange/60 p-4 rounded-lg flex-grow-0 flex-shrink-0 basis-[45%] min-h-[300px] max-h-[400px]'> {/* Tamanho consistente */}
                     <h3 className='font-bold text-2xl text-center'>O que oferecemos?</h3>
                     <ul className='flex flex-col justify-center gap-2 p-4 list-disc'>
                         <li>Plataforma estabelecida com uma comunidade ativa de espectadores.</li>
@@ -25,7 +25,7 @@ export default function Juntese() {
                         <li>Colaborações com outros streamers talentosos e oportunidades de crescimento na equipe. </li>
                     </ul>
                 </li>
-                <li className='flex flex-col gap-4 bg-osg-orange/60 p-4 rounded-lg w-[80%] h-[100%]'>
+                <li className='flex flex-col justify-center items-center gap-4 bg-osg-orange/60 p-4 rounded-lg flex-grow-0 flex-shrink-0 basis-[45%] min-h-[300px] max-h-[400px]'> {/* Tamanho consistente */}
                     <h3 className='font-bold text-2xl text-center'>Divisões</h3>
                     <ul className='flex flex-col justify-center gap-2 p-4 list-disc'>
                         <li><strong>Tier 1:</strong> Nossa academia, se você é iniciante, precisa de ajuda, ou queira somente se divulgar, esse é seu lugar! </li>
@@ -33,7 +33,7 @@ export default function Juntese() {
                         <li><strong>Tier 3 (Em Breve):</strong> Você é um streamer profissional? Essa divisão é para você, contratos e salário personalizado.</li>
                     </ul>
                 </li>
-                <li className='flex flex-col gap-4 bg-osg-orange/60 p-4 rounded-lg w-[80%] h-[100%]'>
+                <li className='flex flex-col justify-center items-center gap-4 bg-osg-orange/60 p-4 rounded-lg flex-grow-0 flex-shrink-0 basis-[45%] min-h-[300px] max-h-[400px]'> {/* Tamanho consistente */}
                     <h3 className='font-bold text-2xl text-center'>Como fazer seu recrutamento!</h3>
                     <ol className='flex flex-col justify-center gap-2 p-4 list-decimal'>
                         <li>Leia nosso <Link href="https://osguerreiros.com/estatuto-academia-a/" target='_blank' className='text-blue-700'>estatuto</Link>, se estiver de acordo prosiga.</li>

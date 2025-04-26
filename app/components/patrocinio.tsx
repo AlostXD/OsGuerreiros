@@ -95,7 +95,7 @@ export default function Patrocinio({ setIsModalOpen }: PatrocinioProps) {
                 modalAberto === patrocinador.id && (
                     <ModalWrapper key={patrocinador.id}>
                         <div className="fixed inset-0 bg-black/90 flex items-center justify-center">
-                            <div className="bg-zinc-900 p-4 gap-4 rounded-lg flex flex-col md:flex-row items-center justify-center relative max-w-[90%] md:max-w-[70%]">
+                            <div className="bg-zinc-900 p-4 gap-4 rounded-lg flex flex-col md:flex-row items-center justify-center relative max-w-[90%] md:max-w-[40%]">
                                 <Image
                                     src={patrocinador.img}
                                     alt={`${patrocinador.nome} logo`}

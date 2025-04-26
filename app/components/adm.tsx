@@ -54,7 +54,7 @@ export default function Adm({ setIsModalOpen }: AdmProps) {
         <>
             <div className="bg-[url(/bg-adm.webp)] bg-cover bg-center bg-local min-h-screen flex flex-col justify-center items-center gap-8 p-4" id="administracao">
                 <h1 className="font-bold text-osg-orange text-3xl text-center">Equipe Administrativa</h1>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 gap-6">
                     {adm.map((admin) => (
                         <div
                             key={admin.id}
@@ -87,7 +87,7 @@ export default function Adm({ setIsModalOpen }: AdmProps) {
                                 }
                             }}
                         >
-                            <div className="bg-zinc-900 p-6 rounded-lg flex flex-col md:flex-row items-center justify-center relative w-full max-w-[300px] md:max-w-[60%]">
+                            <div className="bg-zinc-900 p-6 rounded-lg flex flex-col md:flex-row items-center justify-center relative w-full max-w-[300px] md:max-w-[40%]">
                                 <Image
                                     src={admin.img}
                                     width={300}

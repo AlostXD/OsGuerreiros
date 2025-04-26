@@ -23,11 +23,12 @@ export default function Servidores({ setIsModalOpen }: ServidoresProps) {
 
     return (
         <>
-            <div className="min-h-screen flex flex-col items-center p-8 gap-4" id="servidores-de-games">
+        <div className="min-h-screen flex justify-center items-center">
+            <div className="flex flex-col items-center justify-center p-8 gap-6" id="servidores-de-games">
                 <h1 className="text-osg-orange font-bold text-3xl">Servidores de Games</h1>
                 <h3 className="italic underline">Oferecimento Host Havoc</h3>
-                <div className="flex justify-between items-center gap-4 m-auto max-w-[70%] flex-col md:flex-row">
-                    <div className="flex flex-col gap-6 max-w-[75%]">
+                <div className="flex justify-center items-center gap-4 m-auto max-w-[70%] flex-col md:flex-row">
+                    <div className="flex flex-col gap-2 max-w-[55%]">
                         <h3 className="text-osg-orange font-bold text-xl">Servidores otimizados para streamers</h3>
                         <p>Então, galera, estamos convidando todos os fãs de jogos para se juntarem a nós em nossos servidores! Não importa se você é um veterano dos games ou um novato, temos algo especial para você!</p>
                         <ul className="flex flex-col justify-center gap-2 p-4 list-disc">
@@ -48,7 +49,7 @@ export default function Servidores({ setIsModalOpen }: ServidoresProps) {
                 </div>
                 <h2 className='font-bold'>Chame seus amigos e embarque nessa jornada. Estamos esperando por você! Nos vemos lá! Prepare-se para a ação!</h2>
             </div>
-
+        </div>
             {/* Modais */}
             {modalAberto === 1 && (
                 <ModalWrapper>
@@ -152,6 +153,7 @@ export default function Servidores({ setIsModalOpen }: ServidoresProps) {
                     </div>
                 </ModalWrapper>
             )}
+            
         </>
     );
 }

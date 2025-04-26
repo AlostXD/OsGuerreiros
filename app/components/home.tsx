@@ -19,7 +19,7 @@ export default function Home() {
             className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
           />
           <div className="flex flex-wrap gap-4 mt-12 pt-8 justify-center">
-            <Link href="https://osg.cx/equipe-osguerreiros" target="_blank">
+            <Link href="https://osg.cx/equipe-principal" target="_blank">
               <Image
                 src="/btn-team-osguerreiros.gif"
                 width={250}
